@@ -67,7 +67,7 @@ namespace eBiljett.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Loga")
+                    b.Property<string>("Logo")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -96,7 +96,7 @@ namespace eBiljett.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("ImageURL")
                         .IsRequired()
                         .HasColumnType("longtext");
 

@@ -212,9 +212,9 @@ namespace eBiljett.Data
                     context.SaveChanges();
                 }
                 //Actors & MOvies
-                if (!context.Actors_Movies.Any())
+                if (!context.Actor_Movies.Any())
                 {
-                    context.Actors_Movies.AddRange(new List<Actor_Movie>()
+                    context.Actor_Movies.AddRange(new List<Actor_Movie>()
                     {
                         new Actor_Movie()
                         {

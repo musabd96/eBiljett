@@ -11,8 +11,8 @@ using eBiljett.Data;
 namespace eBiljett.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230130160030_Initial")]
-    partial class Initial
+    [Migration("20230130235344_firstmigration")]
+    partial class firstmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -70,7 +70,7 @@ namespace eBiljett.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Loga")
+                    b.Property<string>("Logo")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -99,7 +99,7 @@ namespace eBiljett.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("ImageURL")
                         .IsRequired()
                         .HasColumnType("longtext");
 
