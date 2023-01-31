@@ -1,22 +1,23 @@
 ﻿using eBiljett.Data;
+using eBiljett.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace eBiljett.Controllers
 {
-    public class MoviesControllers : Controller
+    public class MoviesController : Controller
     {
         private readonly AppDbContext _context;
 
-        public MoviesControllers(AppDbContext context)
+        public MoviesController(AppDbContext context)
         {
             _context = context;
         }
 
         public async Task<IActionResult> Index()
         {
-            var allProducers = await _context.Movies.ToListAsync();
-            return View();
+            var allMovies = await _context.Movies.Include(n => n.Cinema).OrderBy(n => n.Name).ToListAsync();
+            return View(allMovies);
         }
     }
 }

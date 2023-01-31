@@ -7,7 +7,7 @@ namespace eBiljett.Models
         [Key]
         public int id { get; set; }
 
-        [Display(Name = "Profile Picture URL")]      
+        [Display(Name = "Profile Picture")]      
         public string ProfilePictureURL { get; set; }
         public string fullName { get; set; }
         [Display(Name = "Full Name")]

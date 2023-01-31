@@ -24,31 +24,31 @@ namespace eBiljett.Data
                         {
                             Name = "Cinema 1",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
-                            Discription = "This is the description of the first cinema"
+                            Description = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
                             Name = "Cinema 2",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-2.jpeg",
-                            Discription = "This is the description of the first cinema"
+                            Description = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
                             Name = "Cinema 3",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-3.jpeg",
-                            Discription = "This is the description of the first cinema"
+                            Description = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
                             Name = "Cinema 4",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-4.jpeg",
-                            Discription = "This is the description of the first cinema"
+                            Description = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
                             Name = "Cinema 5",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-5.jpeg",
-                            Discription = "This is the description of the first cinema"
+                            Description = "This is the description of the first cinema"
                         },
                     });
                     context.SaveChanges();
@@ -101,31 +101,31 @@ namespace eBiljett.Data
                         {
                             fullName = "Producer 1",
                             Bio = "This is the description of the first cinema",
-                            profilePictureURL = "http://dotnethow.net/images/producer/producer-1.jpeg"
+                            profilePictureURL = "http://dotnethow.net/images/producers/producer-1.jpeg"
                         },
                         new Producer()
                         {
                             fullName = "Producer 2",
                             Bio = "This is the description of the first cinema",
-                            profilePictureURL = "http://dotnethow.net/images/producer/producer-2.jpeg",
+                            profilePictureURL = "http://dotnethow.net/images/producers/producer-2.jpeg",
                         },
                         new Producer()
                         {
                             fullName = "Producer 3",
                             Bio = "This is the description of the first cinema",
-                            profilePictureURL = "http://dotnethow.net/images/producer/producer-3.jpeg",
+                            profilePictureURL = "http://dotnethow.net/images/producers/producer-3.jpeg",
                         },
                         new Producer()
                         {
                             fullName = "Producer 4",
                             Bio = "This is the description of the first cinema",
-                            profilePictureURL = "http://dotnethow.net/images/producer/producer-4.jpeg",
+                            profilePictureURL = "http://dotnethow.net/images/producers/producer-4.jpeg",
                         },
                         new Producer()
                         {
                             fullName = "Producer 5",
                             Bio = "This is the description of the first cinema",
-                            profilePictureURL = "http://dotnethow.net/images/producer/producer-5.jpeg",
+                            profilePictureURL = "http://dotnethow.net/images/producers/producer-5.jpeg",
                         },
                     });
                     context.SaveChanges();
@@ -141,7 +141,7 @@ namespace eBiljett.Data
                             Description = "This is the Life Movie description,",
                             Price = 39.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
-                            StarDate= DateTime.Now.AddDays(-10),
+                            StartDate= DateTime.Now.AddDays(-10),
                             EndDate= DateTime.Now.AddDays(10),
                             CinemaId = 3,
                             ProducerId = 3,
@@ -153,7 +153,7 @@ namespace eBiljett.Data
                             Description = "This is the The Shawshank Redemption Movie description,",
                             Price = 39.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
-                            StarDate= DateTime.Now,
+                            StartDate= DateTime.Now,
                             EndDate= DateTime.Now.AddDays(3),
                             CinemaId = 1,
                             ProducerId = 1,
@@ -165,7 +165,7 @@ namespace eBiljett.Data
                             Description = "This is the Ghost Movie description,",
                             Price = 39.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
-                            StarDate= DateTime.Now,
+                            StartDate= DateTime.Now,
                             EndDate= DateTime.Now.AddDays(7),
                             CinemaId = 4,
                             ProducerId = 4,
@@ -177,7 +177,7 @@ namespace eBiljett.Data
                             Description = "This is the Race  description,",
                             Price = 39.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-6.jpeg",
-                            StarDate= DateTime.Now.AddDays(-10),
+                            StartDate= DateTime.Now.AddDays(-10),
                             EndDate= DateTime.Now.AddDays(-5),
                             CinemaId = 1,
                             ProducerId = 2,
@@ -189,7 +189,7 @@ namespace eBiljett.Data
                             Description = "This is the Scoob Movie description,",
                             Price = 39.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
-                            StarDate= DateTime.Now.AddDays(-10),
+                            StartDate= DateTime.Now.AddDays(-10),
                             EndDate= DateTime.Now.AddDays(-2),
                             CinemaId = 1,
                             ProducerId = 3,
@@ -201,7 +201,7 @@ namespace eBiljett.Data
                             Description = "This is the Cold Soles Movie description,",
                             Price = 39.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-8.jpeg",
-                            StarDate= DateTime.Now.AddDays(3),
+                            StartDate= DateTime.Now.AddDays(3),
                             EndDate= DateTime.Now.AddDays(20),
                             CinemaId = 1,
                             ProducerId = 5,
