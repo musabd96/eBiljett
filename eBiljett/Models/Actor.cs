@@ -6,11 +6,13 @@ namespace eBiljett.Models
     {
         [Key]
         public int id { get; set; }
-              
-        public string profilePictureURL { get; set; }
-        public string fullName { get; set; }
-        public string Bio { get; set; }
 
+        [Display(Name = "Profile Picture URL")]      
+        public string ProfilePictureURL { get; set; }
+        public string fullName { get; set; }
+        [Display(Name = "Full Name")]
+        public string Bio { get; set; }
+        [Display(Name = "Biography")]
         public List<Actor_Movie> Actors_Movies { get; set; }
     }
 }
