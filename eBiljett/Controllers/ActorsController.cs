@@ -1,5 +1,6 @@
 ﻿using eBiljett.Data;
 using eBiljett.Data.Services;
+using eBiljett.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eBiljett.Controllers
@@ -17,6 +18,22 @@ namespace eBiljett.Controllers
         {
             var data =await _service.GetAll();
             return View(data);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost] 
+        public async Task<IActionResult> Create([Bind("FullName,ProfilePictureURL,Bio")]Actor actor)
+        {
+            if (!ModelState.IsValid)
+            {
+               return View(actor);
+            }
+            _service.Add(actor);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
