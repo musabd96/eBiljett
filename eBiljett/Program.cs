@@ -8,9 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options => options.UseMySQL(
     builder.Configuration.GetConnectionString("DefualtConnectionString")));
+
+
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddTransient<IActorsService, ActorsService>();
+builder.Services.AddScoped<IActorsService, ActorsService>();
 
 
 

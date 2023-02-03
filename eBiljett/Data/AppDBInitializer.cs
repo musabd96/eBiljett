@@ -61,31 +61,31 @@ namespace eBiljett.Data
                     {
                         new Actor()
                         {
-                            fullName = "Actor 1",
+                            FullName = "Actor 1",
                             Bio = "This is the description of the first cinema",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-1.jpeg",
                         },
                         new Actor()
                         {
-                            fullName = "Actor 2",
+                            FullName = "Actor 2",
                             Bio = "This is the description of the first cinema",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-2.jpeg",
                         },
                         new Actor()
                         {
-                            fullName = "Actor 3",
+                            FullName = "Actor 3",
                             Bio = "This is the description of the first cinema",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-3.jpeg",
                         },
                         new Actor()
                         {
-                            fullName = "Actor 4",
+                            FullName = "Actor 4",
                             Bio = "This is the description of the first cinema",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-4.jpeg",
                         },
                         new Actor()
                         {
-                            fullName = "Actor 5",
+                            FullName = "Actor 5",
                             Bio = "This is the description of the first cinema",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-5.jpeg",
                         },

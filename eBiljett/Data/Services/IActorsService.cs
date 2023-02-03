@@ -1,14 +1,15 @@
 ﻿using eBiljett.Models;
+using System.Threading.Tasks;
 
 namespace eBiljett.Data.Services
 {
     public interface IActorsService
     {
-        Task<IEnumerable<Actor>> GetAll();
-        Actor GetById(int id);
+        Task<IEnumerable<Actor>> GetAllAsync();
+        Task<Actor> GetByIdAsync(int Id);
 
-        void Add(Actor actor);
-        Actor Update(int id, Actor actor);
-        Actor Delete(int id);
+        Task AddAsync(Actor actor);
+        Task<Actor> UpdateAsync(int Id, Actor actor);
+        void Delete(int Id);
     }
 }

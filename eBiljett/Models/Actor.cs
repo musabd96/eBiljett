@@ -5,7 +5,7 @@ namespace eBiljett.Models
     public class Actor
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Profile Picture")]
         [Required(ErrorMessage ="Profile picture is required")] 
@@ -13,8 +13,7 @@ namespace eBiljett.Models
 
         [Display(Name = "Full Name")]
         [Required(ErrorMessage ="Full Name is required")]
-        [StringLength(50, ErrorMessage = "Full Name must be between 3 and 50 chars")]
-        public string fullName { get; set; }
+        public string FullName { get; set; }
 
         [Display(Name = "Biography")]
         [Required(ErrorMessage ="Biography is required")]  
