@@ -1,0 +1,38 @@
+﻿using eBiljett.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+
+namespace eBiljett.Data.Base
+{
+    public class EntityBaseRepo<T> : IEntityBaseRepo<T> where T : class, IEntityBase, new()
+    {
+        private readonly AppDbContext _context;
+
+        public EntityBaseRepo(AppDbContext context)
+        {
+            _context= context;
+        }
+
+
+        public async Task AddAsync(T entity) => await _context.Set<T>().AddAsync(entity);
+        
+
+        public async Task DeleteAsync(int Id)
+        {
+            var entity = await _context.Set<T>().FirstOrDefaultAsync(n => n.Id == Id);
+            EntityEntry entityEntry = _context.Entry<T>(entity);
+            entityEntry.State = EntityState.Deleted;
+        }
+
+        public async Task<IEnumerable<T>> GetAllAsync() => await _context.Set<T>().ToListAsync();
+
+
+        public async Task<T> GetByIdAsync(int Id) => await _context.Set<T>().FirstOrDefaultAsync(n => n.Id == Id);
+
+        public async Task UpdateAsync(int Id, T entity)
+        {
+            EntityEntry entityEntry = _context.Entry<T>(entity);
+            entityEntry.State = EntityState.Modified;
+        }
+    }
+}

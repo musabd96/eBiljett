@@ -9,7 +9,7 @@ namespace eBiljett.Data.Services
         Task<Actor> GetByIdAsync(int Id);
 
         Task AddAsync(Actor actor);
-        Task<Actor> UpdateAsync(int Id, Actor actor);
-        void Delete(int Id);
+        Task<Actor> UpdateAsync(int Id, Actor newActor);
+        Task DeleteAsync(int Id);
     }
 }

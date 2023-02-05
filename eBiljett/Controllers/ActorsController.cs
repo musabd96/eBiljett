@@ -42,7 +42,7 @@ namespace eBiljett.Controllers
         {
             var actorDetails = await _service.GetByIdAsync(Id);
 
-            if (actorDetails == null) return View("NotFund");
+            if (actorDetails == null) return View("NotFound");
             return View(actorDetails);
             
             
@@ -52,14 +52,13 @@ namespace eBiljett.Controllers
         {
             var actorDetails = await _service.GetByIdAsync(Id);
 
-            if (actorDetails == null) return View("NotFund");
+            if (actorDetails == null) return View("NotFound");
             return View(actorDetails);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int Id,[Bind("FullName,ProfilePictureURL,Bio")] Actor actor)
+        public async Task<IActionResult> Edit(int Id, [Bind("Id,FullName,ProfilePictureURL,Bio")] Actor actor)
         {
-
             if (ModelState.IsValid)
             {
                 return View(actor);
@@ -67,5 +66,26 @@ namespace eBiljett.Controllers
             await _service.UpdateAsync(Id, actor);
             return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> Delete(int Id)
+        {
+            var actorDetails = await _service.GetByIdAsync(Id);
+
+            if (actorDetails == null) return View("NotFound");
+            return View(actorDetails);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int Id)
+        {
+            var actorDetails = await _service.GetByIdAsync(Id);
+
+            if (actorDetails == null) return View("NotFound");
+
+            await _service.DeleteAsync(Id);
+            
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

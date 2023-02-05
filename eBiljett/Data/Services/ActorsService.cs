@@ -19,9 +19,11 @@ namespace eBiljett.Data.Services
             await _context.SaveChangesAsync();
         }
 
-        public void Delete(int Id)
+        public async Task DeleteAsync (int Id)
         {
-            throw new NotImplementedException();
+            var result = await _context.Actors.FirstOrDefaultAsync(n => n.Id == Id);
+            _context.Actors.Remove(result);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<Actor>> GetAllAsync()
